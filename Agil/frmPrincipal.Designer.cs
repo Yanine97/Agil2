@@ -34,14 +34,9 @@
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proyectosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuarioProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.moduloDeDesarrolloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backlogsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backlogsProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userStoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userStoriesBackklogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sprintToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sprintProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -84,8 +79,7 @@
             // proyectosToolStripMenuItem
             // 
             this.proyectosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.proyectosToolStripMenuItem1,
-            this.usuarioProyectoToolStripMenuItem});
+            this.proyectosToolStripMenuItem1});
             this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
             this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(132, 20);
             this.proyectosToolStripMenuItem.Text = "Modulo de Proyectos";
@@ -93,24 +87,15 @@
             // proyectosToolStripMenuItem1
             // 
             this.proyectosToolStripMenuItem1.Name = "proyectosToolStripMenuItem1";
-            this.proyectosToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
+            this.proyectosToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
             this.proyectosToolStripMenuItem1.Text = "Proyectos";
-            // 
-            // usuarioProyectoToolStripMenuItem
-            // 
-            this.usuarioProyectoToolStripMenuItem.Name = "usuarioProyectoToolStripMenuItem";
-            this.usuarioProyectoToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.usuarioProyectoToolStripMenuItem.Text = "Usuario/Proyecto";
+            this.proyectosToolStripMenuItem1.Click += new System.EventHandler(this.proyectosToolStripMenuItem1_Click);
             // 
             // moduloDeDesarrolloToolStripMenuItem
             // 
             this.moduloDeDesarrolloToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.backlogsToolStripMenuItem,
-            this.backlogsProyectoToolStripMenuItem,
-            this.userStoriesToolStripMenuItem,
-            this.userStoriesBackklogToolStripMenuItem,
             this.sprintToolStripMenuItem,
-            this.sprintProyectoToolStripMenuItem,
             this.toolStripTextBox1});
             this.moduloDeDesarrolloToolStripMenuItem.Name = "moduloDeDesarrolloToolStripMenuItem";
             this.moduloDeDesarrolloToolStripMenuItem.Size = new System.Drawing.Size(133, 20);
@@ -119,38 +104,16 @@
             // backlogsToolStripMenuItem
             // 
             this.backlogsToolStripMenuItem.Name = "backlogsToolStripMenuItem";
-            this.backlogsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.backlogsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.backlogsToolStripMenuItem.Text = "Backlogs";
-            // 
-            // backlogsProyectoToolStripMenuItem
-            // 
-            this.backlogsProyectoToolStripMenuItem.Name = "backlogsProyectoToolStripMenuItem";
-            this.backlogsProyectoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.backlogsProyectoToolStripMenuItem.Text = "Backlog/Proyecto";
-            // 
-            // userStoriesToolStripMenuItem
-            // 
-            this.userStoriesToolStripMenuItem.Name = "userStoriesToolStripMenuItem";
-            this.userStoriesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.userStoriesToolStripMenuItem.Text = "User Stories";
-            // 
-            // userStoriesBackklogToolStripMenuItem
-            // 
-            this.userStoriesBackklogToolStripMenuItem.Name = "userStoriesBackklogToolStripMenuItem";
-            this.userStoriesBackklogToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.userStoriesBackklogToolStripMenuItem.Text = "User Stories/Backlog";
+            this.backlogsToolStripMenuItem.Click += new System.EventHandler(this.backlogsToolStripMenuItem_Click);
             // 
             // sprintToolStripMenuItem
             // 
             this.sprintToolStripMenuItem.Name = "sprintToolStripMenuItem";
-            this.sprintToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.sprintToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sprintToolStripMenuItem.Text = "Sprint";
-            // 
-            // sprintProyectoToolStripMenuItem
-            // 
-            this.sprintProyectoToolStripMenuItem.Name = "sprintProyectoToolStripMenuItem";
-            this.sprintProyectoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.sprintProyectoToolStripMenuItem.Text = "Sprint/Proyecto";
+            this.sprintToolStripMenuItem.Click += new System.EventHandler(this.sprintToolStripMenuItem_Click);
             // 
             // toolStripTextBox1
             // 
@@ -186,14 +149,9 @@
         private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proyectosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proyectosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem usuarioProyectoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem moduloDeDesarrolloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem backlogsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem backlogsProyectoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem userStoriesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem userStoriesBackklogToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sprintToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sprintProyectoToolStripMenuItem;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
     }
 }

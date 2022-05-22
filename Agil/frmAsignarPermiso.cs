@@ -149,5 +149,10 @@ namespace Agil
 
             }
         }
+
+        private void dgvDisponible_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

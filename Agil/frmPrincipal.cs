@@ -21,7 +21,8 @@ namespace Agil
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
-
+            FrmKanbanProyecto f = new FrmKanbanProyecto();
+            f.Show();
         }
 
         private void usarioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,5 +90,27 @@ namespace Agil
 
         }
 
+        private void proyectosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmProyectos f = new frmProyectos();
+            f.Show();
+        }
+
+        private void backlogsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBacklog f = new frmBacklog();
+            f.Show();
+        }
+
+        private void sprintToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSprint f = new frmSprint();
+            f.Show();
+        }
+
+        private void userStoriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

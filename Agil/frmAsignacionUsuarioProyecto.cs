@@ -12,11 +12,22 @@ using System.Windows.Forms;
 
 namespace Agil
 {
-    public partial class frmRolMenu : Form
+    public partial class frmAsignarUsuario : Form
     {
-        public frmRolMenu()
+        public frmAsignarUsuario()
         {
             InitializeComponent();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            txtCodProyecto.Enabled = false;
+            txtNombreProyecto.Enabled = false;
+            txtCodProyecto.Text = Global.v_CodProyecto;
+            txtNombreProyecto.Text = Global.v_NombreProyecto;
+
+            CargaGrillaAsignado();
+            CargaGrillaDisponible();
         }
 
         private void dgvDisponible_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -30,7 +41,7 @@ namespace Agil
                 connectionx.ConnectionString = Global.v_conexion;
                 connectionx.Open();
 
-                string query = @"select * from rol_detalle where cod_rol = " + Global.v_Rol + " and cod_menu = " + Convert.ToString(filaSeleccionada.Cells[0].Value);
+                string query = @"select * from proyecto_usuario where cod_proyecto = " + Global.v_CodProyecto + " and cod_usuario = " + Convert.ToString(filaSeleccionada.Cells[0].Value);
 
                 try
                 {
@@ -40,7 +51,7 @@ namespace Agil
 
                     if (lector.HasRows)
                     {
-                        MessageBox.Show("El Rol ya cuenta con los permisos");
+                        MessageBox.Show("El Usuario seleccionado ya esta Asignado al Proyecto");
 
                     }
                     else
@@ -49,8 +60,8 @@ namespace Agil
                         connection2.ConnectionString = Global.v_conexion;
                         connection2.Open();
 
-                        string query_insert = @"insert into rol_detalle 
-                                        select " + Global.v_Rol + "," + Convert.ToString(filaSeleccionada.Cells[0].Value);
+                        string query_insert = @"insert into proyecto_usuario 
+                                        select " + Global.v_CodProyecto + "," + Convert.ToString(filaSeleccionada.Cells[0].Value);
                         SqlCommand cmd2 = new SqlCommand(query_insert, connection2);
                         cmd2.ExecuteNonQuery();
                         connection2.Close();
@@ -76,7 +87,7 @@ namespace Agil
 
         private void DgvAsignado_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var filaSeleccionada = DgvAsignado.CurrentRow;
+            var filaSeleccionada = dgvAsignado.CurrentRow;
 
             if (filaSeleccionada != null) //¿Existe una referencia?
             {
@@ -84,8 +95,8 @@ namespace Agil
                 connection2.ConnectionString = Global.v_conexion;
                 connection2.Open();
 
-                string query_insert = @"delete from  Rol_Detalle 
-                                where cod_rol = " + Global.v_Rol + " and cod_menu = " + Convert.ToString(filaSeleccionada.Cells[0].Value);
+                string query_insert = @"delete from  proyecto_usuario    
+                                where cod_proyecto = " + Global.v_CodProyecto + " and cod_usuario = " + Convert.ToString(filaSeleccionada.Cells[0].Value);
                 SqlCommand cmd2 = new SqlCommand(query_insert, connection2);
                 cmd2.ExecuteNonQuery();
                 connection2.Close();
@@ -105,7 +116,7 @@ namespace Agil
         {
 
             string query = "";
-            query = @" select cod_menu as Codigo_Menu, Descripcion from menu_sistema  order by 1 asc ";
+            query = @" select COD_USUARIO,NOMBRE from USUARIO order by 1 asc ";
 
 
             SqlConnection connection2 = new SqlConnection(Global.v_conexion);
@@ -125,7 +136,9 @@ namespace Agil
         {
 
             string query = "";
-            query = @" select CODIGO_MENU,DESCRIPCION from v_rol_asignado where codigo_rol = " + txtCodRol.Text +"  order by 1 asc ";
+            query = @"select u.COD_USUARIO,u.NOMBRE 
+from USUARIO u 
+where COD_USUARIO in (select COD_USUARIO from PROYECTO_USUARIO where cod_proyecto =  " + txtCodProyecto.Text + " ) order by 1 asc ";
 
 
             SqlConnection connection2 = new SqlConnection(Global.v_conexion);
@@ -136,33 +149,9 @@ namespace Agil
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            DgvAsignado.DataSource = dt;
-            DgvAsignado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvAsignado.DataSource = dt;
+            dgvAsignado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             connection2.Close();
-        }
-
-        private void frmRolMenu_Load(object sender, EventArgs e)
-        {
-           
-            txtCodRol.Enabled = false;
-            txtDescripcionRol.Enabled = false;
-            txtCodRol.Text = Global.v_Rol;
-            txtDescripcionRol.Text = Global.v_Descriocion_Rol;
-
-            CargaGrillaAsignado();
-            CargaGrillaDisponible();
-
-
-        }
-
-        private void txtCodRol_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDescripcionRol_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void dgvDisponible_CellContentClick(object sender, DataGridViewCellEventArgs e)

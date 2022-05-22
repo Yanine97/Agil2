@@ -56,6 +56,7 @@ namespace Agil
             this.txtCodRol.Name = "txtCodRol";
             this.txtCodRol.Size = new System.Drawing.Size(100, 20);
             this.txtCodRol.TabIndex = 1;
+            this.txtCodRol.TextChanged += new System.EventHandler(this.txtCodRol_TextChanged);
             // 
             // txtDescripcionRol
             // 
@@ -63,6 +64,7 @@ namespace Agil
             this.txtDescripcionRol.Name = "txtDescripcionRol";
             this.txtDescripcionRol.Size = new System.Drawing.Size(307, 20);
             this.txtDescripcionRol.TabIndex = 2;
+            this.txtDescripcionRol.TextChanged += new System.EventHandler(this.txtDescripcionRol_TextChanged);
             // 
             // dgvDisponible
             // 
@@ -72,6 +74,7 @@ namespace Agil
             this.dgvDisponible.Size = new System.Drawing.Size(345, 170);
             this.dgvDisponible.TabIndex = 3;
             this.dgvDisponible.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDisponible_CellClick);
+            this.dgvDisponible.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDisponible_CellContentClick);
             // 
             // DgvAsignado
             // 

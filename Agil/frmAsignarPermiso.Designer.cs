@@ -93,6 +93,7 @@ namespace Agil
             this.dgvDisponible.Size = new System.Drawing.Size(300, 247);
             this.dgvDisponible.TabIndex = 6;
             this.dgvDisponible.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDisponible_CellClick);
+            this.dgvDisponible.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDisponible_CellContentClick);
             // 
             // dgvAsignado
             // 

@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAsignacionUsuarioProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsignacionUsuarioProyecto.Designer.cs">
+      <DependentUpon>frmAsignacionUsuarioProyecto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAsignarPermiso.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAsignarPermiso.Designer.cs">
       <DependentUpon>frmAsignarPermiso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBacklog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBacklog.Designer.cs">
+      <DependentUpon>frmBacklog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKanban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKanban.designer.cs">
+      <DependentUpon>frmKanban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKanbanProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKanbanProyecto.designer.cs">
+      <DependentUpon>FrmKanbanProyecto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -64,6 +88,12 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProyectos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProyectos.Designer.cs">
+      <DependentUpon>frmProyectos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +106,24 @@
     <Compile Include="frmRolMenu.Designer.cs">
       <DependentUpon>frmRolMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSprint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSprint.designer.cs">
+      <DependentUpon>frmSprint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSprintUS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSprintUS.designer.cs">
+      <DependentUpon>frmSprintUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUS.Designer.cs">
+      <DependentUpon>frmUS.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,8 +133,20 @@
     <Compile Include="Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAsignacionUsuarioProyecto.resx">
+      <DependentUpon>frmAsignacionUsuarioProyecto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAsignarPermiso.resx">
       <DependentUpon>frmAsignarPermiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBacklog.resx">
+      <DependentUpon>frmBacklog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKanban.resx">
+      <DependentUpon>frmKanban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKanbanProyecto.resx">
+      <DependentUpon>FrmKanbanProyecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -94,11 +154,23 @@
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmProyectos.resx">
+      <DependentUpon>frmProyectos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRol.resx">
       <DependentUpon>frmRol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRolMenu.resx">
       <DependentUpon>frmRolMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSprint.resx">
+      <DependentUpon>frmSprint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSprintUS.resx">
+      <DependentUpon>frmSprintUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUS.resx">
+      <DependentUpon>frmUS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
